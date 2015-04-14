@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Monopoly.Extensions;
 
 namespace Monopoly
 {
@@ -15,7 +16,9 @@ namespace Monopoly
             if (players.Count < 2 || players.Count > 8)
                 throw new WrongNumberOfPlayersException();
             _players = players;
-            
+            _players.Shuffle<string>();
         }
+
+        public string CurrentPlayer { get { return _players[0]; } }
     }
 }

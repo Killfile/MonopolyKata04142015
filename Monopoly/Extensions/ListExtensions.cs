@@ -8,7 +8,7 @@ namespace Monopoly.Extensions
 {
     public static class ListExtensions
     {
-        public static void Shuffle<T>(this IList<T> list)
+        public static void Shuffle<T>(this List<T> list)
         {
             Random rng = new Random();
             int n = list.Count;
