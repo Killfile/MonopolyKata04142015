@@ -11,7 +11,7 @@ namespace Monopoly.Tests
     public class SpaceTests
     {
         [Test()]
-        public void SpaceTest()
+        public void WhenSpaceIsContructed_NoExceptionsThrown()
         {
             Space space = new Space();
         }

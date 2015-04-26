@@ -27,13 +27,13 @@ namespace Monopoly.Tests
         }
 
         [Test()]
-        public void BoardCanBeConstructed()
+        public void BoardTest_SetupCompletesWithoutError()
         {
             Assert.Pass();
         }
 
         [Test()]
-        public void AdvanceCanBeCalled()
+        public void WhenAdvanceIsCalled_PlayerMovesForward()
         {
             var expected = spaces[2];
             var actual = board.Advance(spaces[0], 2);
@@ -41,7 +41,7 @@ namespace Monopoly.Tests
         }
 
         [Test()]
-        public void AdvanceLoops()
+        public void WhenAdvanceExceedsBoardLength_PlayerPositionLoops()
         {
             var expected = spaces[0];
             var actual = board.Advance(spaces[0], spaces.Count);
